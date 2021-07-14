@@ -1,109 +1,140 @@
-*{
-    margin: 0;
-    border:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "karla";
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "karla";
 }
 
-@font-face{
-    font-family: "karla";
-    src: url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap")
+@font-face {
+  font-family: "karla";
+  src: url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-    /*aqui dentro posso usar qualquer propriedade que quizer*/
-}
-
-body{
-    display: flex;
-    justify-content:center;
-    width: 100%;
-    background: hsl(204, 43%, 93%);
+  /*aqui dentro posso usar qualquer propriedade que quizer*/
 }
 
-.all{
-    width: min(80vw, 600px);/*peega o menor entre eles*/
-    height: auto;
-    display:grid;
-    grid-template-rows: 1.2fr 1fr 1fr;
-    margin:2.5rem 0;
-    box-shadow:  2px 2px 20px 1px rgb(187, 187, 187);
-    background-color: white;
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: hsl(204, 43%, 93%);
 }
 
-section{
-    /* border:1px solid #000; */
-    padding:1.3rem;
+.all {
+  width: min(80vw, 600px); /*peega o menor entre eles*/
+  height: auto;
+  display: grid;
+  grid-template-rows: 1.2fr 1fr 1fr;
+  margin: 2.5rem 0;
+  box-shadow: 2px 2px 20px 1px rgb(187, 187, 187);
+  background-color: white;
+  border-radius:5px ;
 }
 
-h1{
-    font-size:5.2vw;
-    margin-bottom: 15px;
-}
-h2{
-    font-size:4vw;
-    margin-bottom: 15px;
-}
-p{
-    font-size:17px;
-}
-.description p{
-    line-height:1.8;
-    color:hsl(218, 22%, 67%);
-}
-.description h2{
-    color:hsl(71, 73%, 54%)
-}
-.description h1{
-    color:hsl(179, 62%, 43%);
+section {
+  /* border:1px solid #000; */
+  padding: 1.3rem;
 }
 
-
-.price{
-    background-color:hsl(179, 62%, 43%);
-    color:white;
-    display:flex;
-    flex-direction:column;
+h1 {
+  font-size: 5.2vw;
+  margin-bottom: 15px;
 }
-.price h1, .whyUs h1{
-    color:hsl(204, 43%, 93%);
+h2 {
+  font-size: 4vw;
+  margin-bottom: 15px;
 }
-
-.price h2{
-    font-size:40px;  
-}
-.price h2 span{
-    font-weight: lighter;
-    font-size: 18px;
-    vertical-align: baseline; 
-    color:hsl(204, 43%, 93%);
-    opacity: .7;
-}
-.whyUs{
-    background-color:hsl(179, 62%, 43%);
-    opacity: .8
-
+p {
+  font-size: 17px;
 }
 
-.whyUs p{
-    color:hsl(204, 43%, 93%);
-    opacity: .5;
-    
+.description p {
+  line-height: 1.8;
+  color: hsl(218, 22%, 67%);
+}
+.description h2 {
+  color: hsl(71, 73%, 54%);
+}
+.description h1 {
+  color: hsl(179, 62%, 43%);
 }
 
-
-button{
-    width: 100%;
-    padding:1rem;
-    align-self: center;
-    margin:auto 0 0;
-    background-color:hsl(71, 73%, 54%);
-    font-size:17px;
-    font-weight: bold;
-    box-shadow:  1px 8px 20px 1px rgba(94, 94, 94, 0.316);
-    border-radius:5px;
-    color:hsl(204, 43%, 93%);
+.price {
+  background-color: hsl(179, 62%, 43%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.price h1,
+.whyUs h1 {
+  color: hsl(204, 43%, 93%);
 }
 
+.price h2 {
+  font-size: 40px;
+}
+.price h2 span {
+  font-weight: lighter;
+  font-size: 18px;
+  vertical-align: baseline;
+  color: hsl(204, 43%, 93%);
+  opacity: 0.7;
+}
+.whyUs {
+  background-color: hsl(179, 62%, 43%);
+  opacity: 0.8;
+  border-radius: 0 0 5px 5px ;
+}
 
+.whyUs p {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.5;
+}
 
+button {
+  width: 100%;
+  padding: 1rem;
+  align-self: center;
+  margin: auto 0 0;
+  background-color: hsl(71, 73%, 54%);
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 1px 8px 20px 1px rgba(94, 94, 94, 0.316);
+  border-radius: 5px;
+  color: hsl(204, 43%, 93%);
+}
 
+@media screen and (min-width: 768px) {
+  .all {
+    grid-template-rows: .9fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 55%;
+    /* border: solid 10px black;     */
+  }
+
+  section{
+      padding:3rem 3rem
+  }
+  .description{
+      grid-column-start: 1;
+      grid-column-end:3;
+  }
+
+  .description p{
+      font-size: 1.1rem;
+  }
+  .whyUs{
+      border-radius: 0 0 5px 0 ;
+  }
+
+  .price {
+    grid-column-start: 1;
+    grid-column-end:2;
+    border-radius:  0 0 0 5px;
+  }
+
+  h1,h2{
+      font-size:1.3rem
+  }
+
+}
